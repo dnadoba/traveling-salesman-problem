@@ -1,8 +1,8 @@
-#macOS App in Swift für den Taveling Salesman 
+#macOS App in Swift für den Traveling Salesman 
 ##Der Handlungsreisende
 Finde die kürzeste Route und hilf dem Traveling Salesman! 
 Wegfindung auf Basis eines bidirektionalen und gewichtetem Graphen. 
-Lösung fur die Code Competition "Der Handlungsreisende" im Februar 2017 von [IT-Talents.de](https://www.it-talents.de/)
+Lösung für die Code Competition "Der Handlungsreisende" im Februar 2017 von [IT-Talents.de](https://www.it-talents.de/)
 ![Übersicht](./content/Overview.png)
 ####Detail Ansicht
 ![Anzeigen von allen Routen von einem Wegpunkt aus](./content/Detail.png)
