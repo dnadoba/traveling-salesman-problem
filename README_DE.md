@@ -14,6 +14,6 @@ Lösung für die Code Competition "Der Handlungsreisende" im Februar 2017 von [I
 ![Touch Bar Support](./content/Touch Bar.png)
 
 ####Video:  
-[https://www.youtube.com/watch?v=2_piE6WCZNk&feature=youtu.be]()
+[https://www.youtube.com/watch?v=2_piE6WCZNk&feature=youtu.be](https://www.youtube.com/watch?v=2_piE6WCZNk&feature=youtu.be)
 
 Twitter: @dnadoba
