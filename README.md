@@ -9,11 +9,11 @@ Here are some sceenshots and a video to give you a quick overview:
 ![shows all calculated routes](./content/Detail.png)
 ####Waypoints can be deleted
 ![Wegpunkte löschbar](./content/Delete.png)
-####Resolve issues with just a single click
+####Resolves issues with just a single click
 ![Resolve Issues](./content/Resolve Error.png)
 ####Touch Bar support
 ![Touch Bar support](./content/Touch Bar.png)
-####Video in English
+####Video in english
 [https://www.youtube.com/watch?v=OLHIzVaYhbs](https://www.youtube.com/watch?v=OLHIzVaYhbs)
 ####Video in german:  
 [https://www.youtube.com/watch?v=2_piE6WCZNk](https://www.youtube.com/watch?v=2_piE6WCZNk)
