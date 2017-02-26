@@ -14,7 +14,7 @@ Here are some sceenshots and a video to give you a quick overview:
 ####Touch Bar support
 ![Touch Bar support](./content/Touch Bar.png)
 ####Video in english
-[https://www.youtube.com/watch?v=OLHIzVaYhbs](https://www.youtube.com/watch?v=OLHIzVaYhbs)
+[https://www.youtube.com/watch?v=9rd1x_srxYY](https://www.youtube.com/watch?v=9rd1x_srxYY)
 ####Video in german:  
 [https://www.youtube.com/watch?v=2_piE6WCZNk](https://www.youtube.com/watch?v=2_piE6WCZNk)
 
