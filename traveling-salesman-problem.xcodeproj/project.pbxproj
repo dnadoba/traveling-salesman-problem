@@ -24,7 +24,7 @@
 		C15ED6FB1E52680D0016F07E /* RouteSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15ED6FA1E52680D0016F07E /* RouteSummary.swift */; };
 		C15ED6FD1E5272950016F07E /* RouteStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15ED6FC1E5272950016F07E /* RouteStep.swift */; };
 		C15ED6FF1E529D310016F07E /* RouteStepCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15ED6FE1E529D310016F07E /* RouteStepCellView.swift */; };
-		C18ADB641E4D0C1F00963090 /* WeightedGraph+shortesPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18ADB631E4D0C1F00963090 /* WeightedGraph+shortesPath.swift */; };
+		C18ADB641E4D0C1F00963090 /* WeightedGraph+shortestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18ADB631E4D0C1F00963090 /* WeightedGraph+shortestPath.swift */; };
 		C18ADB661E4D0D3100963090 /* WeightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18ADB651E4D0D3100963090 /* WeightedEdge.swift */; };
 		C18ADB681E4D0D5B00963090 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18ADB671E4D0D5B00963090 /* Vertex.swift */; };
 		C18ADB6C1E4D1DB000963090 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18ADB6B1E4D1DB000963090 /* WindowController.swift */; };
@@ -35,6 +35,7 @@
 		C1CCE08B1E57216D002F635E /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A611E4923B200906AB2 /* RouteController.swift */; };
 		C1CCE08D1E57348C002F635E /* WaypointCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCE08C1E57348C002F635E /* WaypointCellView.swift */; };
 		C1CCE08F1E57388F002F635E /* Optional+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCE08E1E57388F002F635E /* Optional+extension.swift */; };
+		C1EA93071E64DC2C006E414F /* WeightedGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA93061E64DC2C006E414F /* WeightedGraphTests.swift */; };
 		C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */; };
 		C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */; };
 /* End PBXBuildFile section */
@@ -81,7 +82,7 @@
 		C15ED6FA1E52680D0016F07E /* RouteSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSummary.swift; sourceTree = "<group>"; };
 		C15ED6FC1E5272950016F07E /* RouteStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteStep.swift; path = model/RouteStep.swift; sourceTree = SOURCE_ROOT; };
 		C15ED6FE1E529D310016F07E /* RouteStepCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStepCellView.swift; sourceTree = "<group>"; };
-		C18ADB631E4D0C1F00963090 /* WeightedGraph+shortesPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WeightedGraph+shortesPath.swift"; path = "Graph/WeightedGraph+shortesPath.swift"; sourceTree = SOURCE_ROOT; };
+		C18ADB631E4D0C1F00963090 /* WeightedGraph+shortestPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WeightedGraph+shortestPath.swift"; path = "Graph/WeightedGraph+shortestPath.swift"; sourceTree = SOURCE_ROOT; };
 		C18ADB651E4D0D3100963090 /* WeightedEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeightedEdge.swift; path = Graph/WeightedEdge.swift; sourceTree = SOURCE_ROOT; };
 		C18ADB671E4D0D5B00963090 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vertex.swift; path = Graph/Vertex.swift; sourceTree = SOURCE_ROOT; };
 		C18ADB6B1E4D1DB000963090 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		C1BE4CCD1E5719660070D1B5 /* RouteCalculationOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationOption.swift; sourceTree = "<group>"; };
 		C1CCE08C1E57348C002F635E /* WaypointCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointCellView.swift; sourceTree = "<group>"; };
 		C1CCE08E1E57388F002F635E /* Optional+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+extension.swift"; sourceTree = "<group>"; };
+		C1EA93061E64DC2C006E414F /* WeightedGraphTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightedGraphTests.swift; sourceTree = "<group>"; };
 		C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointManagerState.swift; sourceTree = "<group>"; };
 		C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 		C1397A701E4923B200906AB2 /* traveling-salesman-problemTests */ = {
 			isa = PBXGroup;
 			children = (
+				C1EA93061E64DC2C006E414F /* WeightedGraphTests.swift */,
 				C1397A711E4923B200906AB2 /* traveling_salesman_problemTests.swift */,
 				C1397A731E4923B200906AB2 /* Info.plist */,
 			);
@@ -209,7 +212,7 @@
 				C18ADB671E4D0D5B00963090 /* Vertex.swift */,
 				C18ADB651E4D0D3100963090 /* WeightedEdge.swift */,
 				C1BE4CCB1E5718000070D1B5 /* PathAlgorithm.swift */,
-				C18ADB631E4D0C1F00963090 /* WeightedGraph+shortesPath.swift */,
+				C18ADB631E4D0C1F00963090 /* WeightedGraph+shortestPath.swift */,
 				C1BE4CC91E5702A80070D1B5 /* WeightedGraph+nearestNeighborPath.swift */,
 			);
 			name = Graph;
@@ -393,7 +396,7 @@
 				C1BE4CCE1E5719660070D1B5 /* RouteCalculationOption.swift in Sources */,
 				C1BE4CCA1E5702A80070D1B5 /* WeightedGraph+nearestNeighborPath.swift in Sources */,
 				C11867C31E4B6D1E00E6BB43 /* CLLocationCoordinate2D+extension.swift in Sources */,
-				C18ADB641E4D0C1F00963090 /* WeightedGraph+shortesPath.swift in Sources */,
+				C18ADB641E4D0C1F00963090 /* WeightedGraph+shortestPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1397A721E4923B200906AB2 /* traveling_salesman_problemTests.swift in Sources */,
+				C1EA93071E64DC2C006E414F /* WeightedGraphTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -76,6 +76,15 @@ struct WeightedGraph<V: Vertex,E: WeightedEdge> where V == E.V {
         return inserted
     }
     
+    /// Removes the given edge if it exists in the graph
+    ///
+    /// - Parameter edge: edge to remove from the graph
+    /// - Returns: true if the edge was in the graph and was removed, otherwise false
+    @discardableResult
+    mutating func remove(_ edge: E) -> Bool {
+        return edgesStartingFromVertex[edge.source]?.remove(edge) != nil
+    }
+    
     /// Removes all edges
     ///
     /// - Parameter keepingCapacity: if true, the graph's storage for the edges is preserved

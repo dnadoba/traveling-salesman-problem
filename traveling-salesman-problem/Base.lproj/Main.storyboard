@@ -1039,9 +1039,8 @@ CA
                                     <touchBarItems>
                                         <touchBarItem id="zZd-NB-JrV">
                                             <viewController key="viewController" id="scc-tD-wB1">
-                                                <segmentedControl key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-59-lNu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-59-lNu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="HHZ-yB-hzh">
                                                         <font key="font" metaFont="system"/>
                                                         <segments>
@@ -1059,9 +1058,8 @@ CA
                                         </touchBarItem>
                                         <touchBarItem id="Y9V-gX-mnl">
                                             <viewController key="viewController" id="dCE-hF-G8S">
-                                                <segmentedControl key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-0O-qEo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-0O-qEo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="30"/>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="NU1-uE-5UE">
                                                         <font key="font" metaFont="system"/>
                                                         <segments>
@@ -1078,9 +1076,8 @@ CA
                                         </touchBarItem>
                                         <touchBarItem id="he8-4Q-aNM">
                                             <viewController key="viewController" id="S5j-Ri-cb2">
-                                                <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-w9-gZF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-w9-gZF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
                                                     <buttonCell key="cell" type="push" title="Alternative Routes" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="kUZ-eL-8sS">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -1100,7 +1097,6 @@ CA
                                 <viewController key="viewController" id="6mG-JZ-C8V">
                                     <textField key="view" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7m-Ug-VYy">
                                         <rect key="frame" x="0.0" y="0.0" width="147" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" borderStyle="bezel" alignment="left" title="calculating 5 routes" drawsBackground="YES" id="xiY-il-x23">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>

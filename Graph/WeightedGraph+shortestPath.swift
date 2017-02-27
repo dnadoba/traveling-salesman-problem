@@ -1,5 +1,5 @@
 //
-//  WeightedGraph+shortesPath.swift
+//  WeightedGraph+shortestPath.swift
 //  traveling-salesman-problem
 //
 //  Created by David Nadoba on 09/02/2017.
@@ -14,7 +14,7 @@ extension WeightedGraph {
     ///
     /// - Parameter start: start and end vertex
     /// - Returns: summed weight, all visited vertices in the correct order and all edges in the correct order
-    func shortesPath(from start: V) -> (W, [V], [E])? {
+    func shortestPath(from start: V) -> (W, [V], [E])? {
         guard contains(start) else {
             return nil
         }

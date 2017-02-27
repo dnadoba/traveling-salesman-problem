@@ -17,7 +17,7 @@ extension WeightedGraph {
     func calculatePath(from start: V, byUsing algorithm: PathAlgorithm) -> (W, [V], [E])? {
         switch algorithm {
         case .exact:
-            return shortesPath(from: start)
+            return shortestPath(from: start)
         case .nearestNeighbor:
             return nearestNeighbarPath(from: start)
         }
