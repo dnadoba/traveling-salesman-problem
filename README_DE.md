@@ -3,6 +3,8 @@
 Finde die kürzeste Route und hilf dem Traveling Salesman! 
 Wegfindung auf Basis eines bidirektionalen und gewichtetem Graphen. 
 Lösung für die Code Competition "Der Handlungsreisende" im Februar 2017 von [IT-Talents.de](https://www.it-talents.de/)
+
+[Download macOS App (Release v1.0)](https://github.com/dnadoba/traveling-salesman-problem/releases/download/v1.0/traveling-salesman-problem.zip)
 ![Übersicht](./content/Overview.png)
 ####Detail Ansicht
 ![Anzeigen von allen Routen von einem Wegpunkt aus](./content/Detail.png)
