@@ -9,7 +9,7 @@ Lösung für die Code Competition "Der Handlungsreisende" im Februar 2017 von [I
 ####Detail Ansicht
 ![Anzeigen von allen Routen von einem Wegpunkt aus](./content/Detail.png)
 ####Wegpunkte löschbar
-![Wegpunkte löschbar](./content/Delete.png)
+![Wegpunkte löschbar](./content/Delete.jpg)
 ####Alle Fehler werden behandelt
 ![Fehler verbessern](./content/Resolve Error.png)
 ####Touch Bar Support

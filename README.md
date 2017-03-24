@@ -10,7 +10,7 @@ Here are some sceenshots and a video to give you a quick overview:
 ####Shows all calculated routes
 ![shows all calculated routes](./content/Detail.png)
 ####Waypoints can be deleted
-![Wegpunkte löschbar](./content/Delete.png)
+![Wegpunkte löschbar](./content/Delete.jpg)
 ####Resolves issues with just a single click
 ![Resolve Issues](./content/Resolve Error.png)
 ####Touch Bar support

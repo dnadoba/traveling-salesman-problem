@@ -17,7 +17,7 @@
 		C1397A601E4923B200906AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A5F1E4923B200906AB2 /* AppDelegate.swift */; };
 		C1397A641E4923B200906AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1397A631E4923B200906AB2 /* Assets.xcassets */; };
 		C1397A671E4923B200906AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1397A651E4923B200906AB2 /* Main.storyboard */; };
-		C1397A721E4923B200906AB2 /* traveling_salesman_problemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A711E4923B200906AB2 /* traveling_salesman_problemTests.swift */; };
+		C1397A721E4923B200906AB2 /* WeightedGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A711E4923B200906AB2 /* WeightedGraphTests.swift */; };
 		C1397A7D1E4923B200906AB2 /* traveling_salesman_problemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A7C1E4923B200906AB2 /* traveling_salesman_problemUITests.swift */; };
 		C1397A8C1E4A0CA600906AB2 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A8B1E4A0CA600906AB2 /* Waypoint.swift */; };
 		C15ED6F51E5265D30016F07E /* RouteSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15ED6F41E5265D30016F07E /* RouteSummaryController.swift */; };
@@ -35,7 +35,6 @@
 		C1CCE08B1E57216D002F635E /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A611E4923B200906AB2 /* RouteController.swift */; };
 		C1CCE08D1E57348C002F635E /* WaypointCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCE08C1E57348C002F635E /* WaypointCellView.swift */; };
 		C1CCE08F1E57388F002F635E /* Optional+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCE08E1E57388F002F635E /* Optional+extension.swift */; };
-		C1EA93071E64DC2C006E414F /* WeightedGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA93061E64DC2C006E414F /* WeightedGraphTests.swift */; };
 		C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */; };
 		C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +71,7 @@
 		C1397A661E4923B200906AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1397A681E4923B200906AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1397A6D1E4923B200906AB2 /* traveling-salesman-problemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "traveling-salesman-problemTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1397A711E4923B200906AB2 /* traveling_salesman_problemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = traveling_salesman_problemTests.swift; sourceTree = "<group>"; };
+		C1397A711E4923B200906AB2 /* WeightedGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedGraphTests.swift; sourceTree = "<group>"; };
 		C1397A731E4923B200906AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1397A781E4923B200906AB2 /* traveling-salesman-problemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "traveling-salesman-problemUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1397A7C1E4923B200906AB2 /* traveling_salesman_problemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = traveling_salesman_problemUITests.swift; sourceTree = "<group>"; };
@@ -92,7 +91,6 @@
 		C1BE4CCD1E5719660070D1B5 /* RouteCalculationOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationOption.swift; sourceTree = "<group>"; };
 		C1CCE08C1E57348C002F635E /* WaypointCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointCellView.swift; sourceTree = "<group>"; };
 		C1CCE08E1E57388F002F635E /* Optional+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+extension.swift"; sourceTree = "<group>"; };
-		C1EA93061E64DC2C006E414F /* WeightedGraphTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightedGraphTests.swift; sourceTree = "<group>"; };
 		C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointManagerState.swift; sourceTree = "<group>"; };
 		C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,8 +176,7 @@
 		C1397A701E4923B200906AB2 /* traveling-salesman-problemTests */ = {
 			isa = PBXGroup;
 			children = (
-				C1EA93061E64DC2C006E414F /* WeightedGraphTests.swift */,
-				C1397A711E4923B200906AB2 /* traveling_salesman_problemTests.swift */,
+				C1397A711E4923B200906AB2 /* WeightedGraphTests.swift */,
 				C1397A731E4923B200906AB2 /* Info.plist */,
 			);
 			path = "traveling-salesman-problemTests";
@@ -404,8 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1397A721E4923B200906AB2 /* traveling_salesman_problemTests.swift in Sources */,
-				C1EA93071E64DC2C006E414F /* WeightedGraphTests.swift in Sources */,
+				C1397A721E4923B200906AB2 /* WeightedGraphTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
