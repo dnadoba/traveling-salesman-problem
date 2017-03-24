@@ -11,9 +11,9 @@ Lösung für die Code Competition "Der Handlungsreisende" im Februar 2017 von [I
 #### Wegpunkte löschbar
 ![Wegpunkte löschbar](./content/Delete.jpg)
 #### Alle Fehler werden behandelt
-![Fehler verbessern](./content/Resolve Error.png)
+![Fehler verbessern](./content/Resolve%20Error.png)
 #### Touch Bar Support
-![Touch Bar Support](./content/Touch Bar.png)
+![Touch Bar Support](./content/Touch%20Bar.png)
 
 #### Video:  
 [https://www.youtube.com/watch?v=2_piE6WCZNk&feature=youtu.be](https://www.youtube.com/watch?v=2_piE6WCZNk&feature=youtu.be)
