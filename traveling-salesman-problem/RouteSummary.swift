@@ -22,12 +22,12 @@ class RouteSummary {
     
     /// summed expected travel time of all routes
     lazy var expectedTravelTime: TimeInterval = {
-        return self.routes.reduce(0) { $0.0 + $0.1.expectedTravelTime }
+        return self.routes.reduce(0) { $0 + $1.expectedTravelTime }
     }()
     
     /// summed distance of all routes
     lazy var distance: CLLocationDistance = {
-        return self.routes.reduce(0) { $0.0 + $0.1.distance }
+        return self.routes.reduce(0) { $0 + $1.distance }
     }()
     
     init(routes: [Route]) {

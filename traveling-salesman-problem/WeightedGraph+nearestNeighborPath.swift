@@ -17,7 +17,7 @@ extension WeightedGraph {
         guard requiredPathLength >= 2 else {
             return nil
         }
-        return nearestNeighbarPath(start: start, path: [start], edges: [], requiredPathLength: requiredPathLength, summedWeight: W())
+        return nearestNeighbarPath(start: start, path: [start], edges: [], requiredPathLength: requiredPathLength, summedWeight: W.zero)
     }
     private func nearestNeighbarPath(start: V, path: [V], edges: [E], requiredPathLength: Int, summedWeight: W) -> (W, [V], [E])? {
         guard path.count <= requiredPathLength else {

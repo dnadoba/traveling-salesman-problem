@@ -23,7 +23,7 @@ extension WeightedGraph {
             return nil
         }
         let nextEdges = edges(from: start)
-        let (complexity, result) = shortesPath(start: start, path: [start], edges: [], nextEdges: nextEdges, requiredPathLength: requiredPathLength, weightSummed: W(), complexity: 0)
+        let (complexity, result) = shortesPath(start: start, path: [start], edges: [], nextEdges: nextEdges, requiredPathLength: requiredPathLength, weightSummed: W.zero, complexity: 0)
         print("calculated shortest path on \(self) with complexity: \(complexity)")
         return result
     }

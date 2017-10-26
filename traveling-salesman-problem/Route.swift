@@ -49,7 +49,12 @@ class Route {
     
 }
 
-extension Double: EdgeWeight {}
+extension Double: EdgeWeight {
+    static var zero: Double {
+        return 0
+    }
+}
+
 
 // MARK: - Equatable
 extension Route : Equatable {

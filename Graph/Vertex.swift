@@ -10,6 +10,6 @@ import Foundation
 
 
 /// A vertex descripes a node in a Graph.
-protocol Vertex: Equatable, Hashable {
+protocol Vertex: Hashable {
     
 }

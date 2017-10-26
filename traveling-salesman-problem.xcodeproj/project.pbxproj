@@ -32,9 +32,10 @@
 		C1BE4CCA1E5702A80070D1B5 /* WeightedGraph+nearestNeighborPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE4CC91E5702A80070D1B5 /* WeightedGraph+nearestNeighborPath.swift */; };
 		C1BE4CCC1E5718000070D1B5 /* PathAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE4CCB1E5718000070D1B5 /* PathAlgorithm.swift */; };
 		C1BE4CCE1E5719660070D1B5 /* RouteCalculationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE4CCD1E5719660070D1B5 /* RouteCalculationOption.swift */; };
-		C1CCE08B1E57216D002F635E /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A611E4923B200906AB2 /* RouteController.swift */; };
+		C1CCE08B1E57216D002F635E /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1397A611E4923B200906AB2 /* RouteViewController.swift */; };
 		C1CCE08D1E57348C002F635E /* WaypointCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCE08C1E57348C002F635E /* WaypointCellView.swift */; };
 		C1CCE08F1E57388F002F635E /* Optional+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCE08E1E57388F002F635E /* Optional+extension.swift */; };
+		C1DDF84E1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF84D1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift */; };
 		C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */; };
 		C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +67,7 @@
 		C11867CE1E4C012600E6BB43 /* WeightedGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeightedGraph.swift; path = model/WeightedGraph.swift; sourceTree = SOURCE_ROOT; };
 		C1397A5C1E4923B200906AB2 /* traveling-salesman-problem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "traveling-salesman-problem.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1397A5F1E4923B200906AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1397A611E4923B200906AB2 /* RouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
+		C1397A611E4923B200906AB2 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		C1397A631E4923B200906AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1397A661E4923B200906AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1397A681E4923B200906AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		C1BE4CCD1E5719660070D1B5 /* RouteCalculationOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationOption.swift; sourceTree = "<group>"; };
 		C1CCE08C1E57348C002F635E /* WaypointCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointCellView.swift; sourceTree = "<group>"; };
 		C1CCE08E1E57388F002F635E /* Optional+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+extension.swift"; sourceTree = "<group>"; };
+		C1DDF84D1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WeightedGraph-dijkstaAlgorithm.swift"; path = "Graph/WeightedGraph-dijkstaAlgorithm.swift"; sourceTree = SOURCE_ROOT; };
 		C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointManagerState.swift; sourceTree = "<group>"; };
 		C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +163,7 @@
 				C18ADB621E4D0BE000963090 /* Graph */,
 				C1397A8A1E4A094E00906AB2 /* Model */,
 				C1397A5F1E4923B200906AB2 /* AppDelegate.swift */,
-				C1397A611E4923B200906AB2 /* RouteController.swift */,
+				C1397A611E4923B200906AB2 /* RouteViewController.swift */,
 				C15ED6F41E5265D30016F07E /* RouteSummaryController.swift */,
 				C18ADB6B1E4D1DB000963090 /* WindowController.swift */,
 				C1397A631E4923B200906AB2 /* Assets.xcassets */,
@@ -211,6 +213,7 @@
 				C1BE4CCB1E5718000070D1B5 /* PathAlgorithm.swift */,
 				C18ADB631E4D0C1F00963090 /* WeightedGraph+shortestPath.swift */,
 				C1BE4CC91E5702A80070D1B5 /* WeightedGraph+nearestNeighborPath.swift */,
+				C1DDF84D1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -297,21 +300,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "David Nadoba";
 				TargetAttributes = {
 					C1397A5B1E4923B200906AB2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XKQRPFVM7Z;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					C1397A6C1E4923B200906AB2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C1397A5B1E4923B200906AB2;
 					};
 					C1397A771E4923B200906AB2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C1397A5B1E4923B200906AB2;
 					};
@@ -374,7 +380,7 @@
 				C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */,
 				C15ED6FF1E529D310016F07E /* RouteStepCellView.swift in Sources */,
 				C1BE4CCC1E5718000070D1B5 /* PathAlgorithm.swift in Sources */,
-				C1CCE08B1E57216D002F635E /* RouteController.swift in Sources */,
+				C1CCE08B1E57216D002F635E /* RouteViewController.swift in Sources */,
 				C18ADB6C1E4D1DB000963090 /* WindowController.swift in Sources */,
 				C1397A601E4923B200906AB2 /* AppDelegate.swift in Sources */,
 				C11867CB1E4BE24C00E6BB43 /* WorkQueue.swift in Sources */,
@@ -384,6 +390,7 @@
 				C18ADB681E4D0D5B00963090 /* Vertex.swift in Sources */,
 				C15ED6FB1E52680D0016F07E /* RouteSummary.swift in Sources */,
 				C15ED6FD1E5272950016F07E /* RouteStep.swift in Sources */,
+				C1DDF84E1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift in Sources */,
 				C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */,
 				C1CCE08D1E57348C002F635E /* WaypointCellView.swift in Sources */,
 				C1397A8C1E4A0CA600906AB2 /* Waypoint.swift in Sources */,
@@ -449,7 +456,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -457,7 +466,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -498,7 +511,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -506,7 +521,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -541,7 +560,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -556,7 +576,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -570,7 +591,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/traveling-salesman-problem.app/Contents/MacOS/traveling-salesman-problem";
 			};
 			name = Debug;
@@ -585,7 +607,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/traveling-salesman-problem.app/Contents/MacOS/traveling-salesman-problem";
 			};
 			name = Release;
@@ -599,7 +622,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "traveling-salesman-problem";
 			};
 			name = Debug;
@@ -613,7 +637,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "traveling-salesman-problem";
 			};
 			name = Release;

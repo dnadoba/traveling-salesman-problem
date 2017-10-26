@@ -72,7 +72,7 @@ class RouteSummaryController: NSViewController, NSTableViewDataSource, NSTableVi
         guard let routeStep = routeSteps[safe: row] else {
             return nil
         }
-        guard let routeStepView = tableView.make(withIdentifier: routeStepCellIdentifier, owner: nil) as? RouteStepCellView else {
+        guard let routeStepView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: routeStepCellIdentifier), owner: nil) as? RouteStepCellView else {
             return nil
         }
         routeStepView.routeStep = routeStep

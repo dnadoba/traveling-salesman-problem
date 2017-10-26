@@ -13,7 +13,7 @@ extension MKMapView {
     func setVisibleMapRects(_ mapRects: [MKMapRect], animated: Bool) {
         setVisibleMapRects(mapRects, edgePadding: .init(), animated: animated)
     }
-    func setVisibleMapRects(_ mapRects: [MKMapRect], edgePadding: EdgeInsets, animated: Bool) {
+    func setVisibleMapRects(_ mapRects: [MKMapRect], edgePadding: NSEdgeInsets, animated: Bool) {
         if let firstMapRect = mapRects.first {
             let unionMapRect = mapRects.dropFirst().reduce(firstMapRect, MKMapRectUnion)
             setVisibleMapRect(unionMapRect, edgePadding: edgePadding, animated: animated)

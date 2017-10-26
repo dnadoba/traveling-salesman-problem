@@ -10,7 +10,7 @@ import Foundation
 
 /// A weighted graph struct that can hold any Vertex that conforms to the Vertex protocol.
 /// Edges must conform to the `WeightedEdge` protocol and can be used to connect two vertices.
-struct WeightedGraph<V: Vertex,E: WeightedEdge> where V == E.V {
+struct WeightedGraph<V, E: WeightedEdge> where V == E.V {
     typealias W = E.Weight
     private(set) var vertices: Set<V> = []
     private var edgesStartingFromVertex: [V: Set<E>] = [:]
@@ -164,6 +164,18 @@ struct WeightedGraph<V: Vertex,E: WeightedEdge> where V == E.V {
         return edgesStartingFromSource?.contains { $0.destination == destination } ?? false
     }
     
+}
+
+extension WeightedGraph {
+    func neighbors(of vertex: V) -> [V] {
+        return edges(from: vertex).map { $0.destination }
+    }
+}
+
+extension WeightedGraph {
+    func edges(from start: V, to end: V) -> [E] {
+        return edges(from: start).filter { $0.destination == end }
+    }
 }
 
 

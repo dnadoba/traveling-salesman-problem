@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="7104"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
-        <plugIn identifier="com.apple.MapKitIBPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="13038"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="13196"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
-        <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.1" requiredIntegratedClassName="NSTouchBar"/>
+        <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -662,6 +662,9 @@ CA
                         <rect key="contentRect" x="196" y="240" width="800" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="800" height="400"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="oeX-PU-WVy"/>
+                        </connections>
                     </window>
                     <touchBar key="touchBar" id="b7X-9e-XSl">
                         <nil name="touchBarItems"/>
@@ -700,16 +703,16 @@ CA
                                                 <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJc-J5-IkP">
                                                     <rect key="frame" x="8" y="84" width="282" height="21"/>
                                                     <subviews>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-3r-hKA">
-                                                            <rect key="frame" x="-2" y="4" width="100" height="17"/>
-                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Transport Type:" id="oPX-FS-4kV">
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-3r-hKA">
+                                                            <rect key="frame" x="-2" y="4" width="67" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Transport:" id="oPX-FS-4kV">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
-                                                        <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A59-fP-I2V">
-                                                            <rect key="frame" x="112" y="-2" width="172" height="24"/>
+                                                        <segmentedControl verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="A59-fP-I2V">
+                                                            <rect key="frame" x="99" y="-2" width="185" height="24"/>
                                                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Aa7-TN-PNX">
                                                                 <font key="font" metaFont="system"/>
                                                                 <segments>
@@ -735,7 +738,7 @@ CA
                                                 <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6l-6k-5MV">
                                                     <rect key="frame" x="8" y="55" width="282" height="21"/>
                                                     <subviews>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUc-op-igI">
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kUc-op-igI">
                                                             <rect key="frame" x="-2" y="4" width="109" height="17"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Shortest path by:" id="wWm-C9-EPI">
                                                                 <font key="font" metaFont="system"/>
@@ -744,7 +747,7 @@ CA
                                                             </textFieldCell>
                                                         </textField>
                                                         <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q0k-a8-JxI">
-                                                            <rect key="frame" x="154" y="-2" width="130" height="24"/>
+                                                            <rect key="frame" x="145" y="-2" width="139" height="24"/>
                                                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="35Z-WN-4Rc">
                                                                 <font key="font" metaFont="system"/>
                                                                 <segments>
@@ -796,7 +799,7 @@ CA
                                                         <binding destination="XfG-lQ-9wD" name="selectedIndex" keyPath="self.routeCalculationAlgorithm" id="cOp-yZ-8TK"/>
                                                     </connections>
                                                 </popUpButton>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNW-J6-XGQ">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TNW-J6-XGQ">
                                                     <rect key="frame" x="6" y="8" width="184" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Algorithm:" id="w1Z-WH-5mq">
                                                         <font key="font" metaFont="system"/>
@@ -862,7 +865,7 @@ CA
                                                                     <rect key="frame" x="1" y="1" width="296" height="53"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-4A-akt">
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" setsMaxLayoutWidthAtFirstLayout="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-4A-akt">
                                                                             <rect key="frame" x="8" y="11" width="230" height="34"/>
                                                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Location Name Very very long name Location Name Very" id="nEk-3Z-1HP">
                                                                                 <font key="font" metaFont="system"/>
@@ -924,7 +927,7 @@ CA
                                             <rect key="frame" x="4" y="8" width="298" height="34"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="700" verticalHuggingPriority="750" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="800" translatesAutoresizingMaskIntoConstraints="NO" id="df4-bx-11P">
+                                                <textField horizontalHuggingPriority="700" verticalHuggingPriority="750" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="800" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="df4-bx-11P">
                                                     <rect key="frame" x="6" y="0.0" width="262" height="34"/>
                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Add waypoints to the map very very long text" id="8nt-yP-QCa">
                                                         <font key="font" metaFont="system"/>
@@ -1019,6 +1022,7 @@ CA
                         </subviews>
                         <constraints>
                             <constraint firstItem="ZXf-Qw-HN2" firstAttribute="leading" secondItem="OEH-8w-ag1" secondAttribute="trailing" id="G0G-Fw-WWK"/>
+                            <constraint firstItem="ZXf-Qw-HN2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AUu-64-lQQ" secondAttribute="trailing" constant="8" id="PoN-EL-Ogw"/>
                             <constraint firstItem="AUu-64-lQQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="8" id="ReY-od-T63"/>
                             <constraint firstAttribute="bottom" secondItem="d7k-eD-G9Q" secondAttribute="bottom" id="Rkd-x4-xcO"/>
                             <constraint firstItem="d7k-eD-G9Q" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Z3e-gY-gyw"/>
@@ -1041,6 +1045,9 @@ CA
                                             <viewController key="viewController" id="scc-tD-wB1">
                                                 <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-59-lNu">
                                                     <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="195" id="fBn-9A-g4W"/>
+                                                    </constraints>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="HHZ-yB-hzh">
                                                         <font key="font" metaFont="system"/>
                                                         <segments>
@@ -1059,7 +1066,8 @@ CA
                                         <touchBarItem id="Y9V-gX-mnl">
                                             <viewController key="viewController" id="dCE-hF-G8S">
                                                 <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-0O-qEo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="NU1-uE-5UE">
                                                         <font key="font" metaFont="system"/>
                                                         <segments>
@@ -1072,22 +1080,23 @@ CA
                                                     </connections>
                                                 </segmentedControl>
                                             </viewController>
-                                            <size key="designTimeSize" width="154" height="30"/>
+                                            <size key="designTimeSize" width="156" height="30"/>
                                         </touchBarItem>
                                         <touchBarItem id="he8-4Q-aNM">
                                             <viewController key="viewController" id="S5j-Ri-cb2">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-w9-gZF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Alternative Routes" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="kUZ-eL-8sS">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" usesAppearanceFont="YES"/>
                                                     </buttonCell>
                                                     <connections>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="shouldRequestAlternativRoutes" id="Tc9-e3-arH"/>
                                                     </connections>
                                                 </button>
                                             </viewController>
-                                            <size key="designTimeSize" width="144" height="30"/>
+                                            <size key="designTimeSize" width="162" height="30"/>
                                         </touchBarItem>
                                     </touchBarItems>
                                 </touchBar>
@@ -1095,16 +1104,17 @@ CA
                             <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="4ni-2f-Vqv"/>
                             <touchBarItem id="uMw-Pb-l1j">
                                 <viewController key="viewController" id="6mG-JZ-C8V">
-                                    <textField key="view" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7m-Ug-VYy">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="24"/>
-                                        <textFieldCell key="cell" borderStyle="bezel" alignment="left" title="calculating 5 routes" drawsBackground="YES" id="xiY-il-x23">
+                                    <textField key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z7m-Ug-VYy">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" borderStyle="bezel" alignment="left" title="calculating 1 route" drawsBackground="YES" id="xiY-il-x23">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </viewController>
-                                <size key="designTimeSize" width="147" height="24"/>
+                                <size key="designTimeSize" width="139" height="24"/>
                             </touchBarItem>
                         </touchBarItems>
                     </touchBar>
@@ -1139,8 +1149,8 @@ CA
                                         <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfJ-nE-yxL" userLabel="Depature">
                                             <rect key="frame" x="8" y="83" width="232" height="44"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-JV-rXe">
-                                                    <rect key="frame" x="-2" y="27" width="98" height="17"/>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-JV-rXe">
+                                                    <rect key="frame" x="-2" y="27" width="97" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Depature Time:" id="tBv-UK-uN8">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1151,7 +1161,7 @@ CA
                                                     <rect key="frame" x="0.0" y="0.0" width="232" height="23"/>
                                                     <subviews>
                                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bFf-1t-ra5">
-                                                            <rect key="frame" x="0.0" y="1.5" width="86" height="19"/>
+                                                            <rect key="frame" x="0.0" y="2" width="87" height="19"/>
                                                             <buttonCell key="cell" type="roundRect" title="now" bezelStyle="roundedRect" alignment="center" borderStyle="border" inset="2" id="ufo-1g-5Z1">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="cellTitle"/>
@@ -1161,7 +1171,7 @@ CA
                                                             </connections>
                                                         </button>
                                                         <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3v-cm-rgh">
-                                                            <rect key="frame" x="94" y="0.0" width="141" height="27"/>
+                                                            <rect key="frame" x="95" y="0.0" width="140" height="27"/>
                                                             <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="o9v-kc-6gF">
                                                                 <font key="font" metaFont="system"/>
                                                                 <date key="date" timeIntervalSinceReferenceDate="504921600">
@@ -1201,15 +1211,15 @@ CA
                                         <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3iW-eg-51R" userLabel="Arrival">
                                             <rect key="frame" x="8" y="58" width="232" height="17"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-wx-rBm">
-                                                    <rect key="frame" x="-2" y="0.0" width="81" height="17"/>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-wx-rBm">
+                                                    <rect key="frame" x="-2" y="0.0" width="80" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Arrival Time:" id="txS-wT-fvV">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCF-rp-eoD">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LCF-rp-eoD">
                                                     <rect key="frame" x="221" y="0.0" width="13" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="zEA-9C-wqi">
                                                         <dateFormatter key="formatter" dateStyle="short" timeStyle="short" doesRelativeDateFormatting="YES" id="XAS-S9-599"/>
@@ -1231,7 +1241,7 @@ CA
                                         <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z97-DT-vfR" userLabel="Travel Time">
                                             <rect key="frame" x="8" y="33" width="232" height="17"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f91-NK-9OP">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f91-NK-9OP">
                                                     <rect key="frame" x="-2" y="0.0" width="78" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Travel Time:" id="Gvi-LF-9pL">
                                                         <font key="font" metaFont="system"/>
@@ -1239,7 +1249,7 @@ CA
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAS-3d-6ML">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zAS-3d-6ML">
                                                     <rect key="frame" x="221" y="0.0" width="13" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="CKH-5r-Ojy">
                                                         <font key="font" metaFont="system"/>
@@ -1260,7 +1270,7 @@ CA
                                         <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGj-1n-fwS" userLabel="Distance">
                                             <rect key="frame" x="8" y="8" width="232" height="17"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwS-uB-toV">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xwS-uB-toV">
                                                     <rect key="frame" x="-2" y="0.0" width="61" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Distance:" id="PYr-rg-Muo">
                                                         <font key="font" metaFont="system"/>
@@ -1268,7 +1278,7 @@ CA
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-IX-XvI">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-IX-XvI">
                                                     <rect key="frame" x="207" y="0.0" width="27" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 m" id="rBr-uM-J7K">
                                                         <mkDistanceFormatter key="formatter" units="default" unitStyle="default" id="RNW-Xx-yFC"/>
@@ -1342,7 +1352,7 @@ CA
                                                                 <stackView distribution="equalCentering" orientation="horizontal" alignment="firstBaseline" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-gI-xUA">
                                                                     <rect key="frame" x="8" y="19" width="231" height="17"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt9-fb-ggf">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jt9-fb-ggf">
                                                                             <rect key="frame" x="-2" y="0.0" width="54" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Arival at" id="0fJ-aw-yTZ">
                                                                                 <font key="font" metaFont="system"/>
@@ -1350,8 +1360,8 @@ CA
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFI-Ha-M4p">
-                                                                            <rect key="frame" x="151" y="0.0" width="82" height="17"/>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oFI-Ha-M4p">
+                                                                            <rect key="frame" x="152" y="0.0" width="81" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Today, 01:00" id="0MU-7V-qlo">
                                                                                 <dateFormatter key="formatter" dateStyle="short" timeStyle="short" doesRelativeDateFormatting="YES" id="O0h-2X-x5j"/>
                                                                                 <font key="font" metaFont="system"/>
@@ -1369,7 +1379,7 @@ CA
                                                                         <real value="3.4028234663852886e+38"/>
                                                                     </customSpacing>
                                                                 </stackView>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USU-Ci-lOW">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="USU-Ci-lOW">
                                                                     <rect key="frame" x="6" y="2" width="235" height="17"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mannheim, Germany" id="0dj-K1-dnl">
                                                                         <font key="font" metaFont="system"/>
@@ -1380,7 +1390,7 @@ CA
                                                                 <stackView distribution="equalSpacing" orientation="horizontal" alignment="firstBaseline" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-Wb-hkC">
                                                                     <rect key="frame" x="8" y="53" width="231" height="17"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-GQ-7rm">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-GQ-7rm">
                                                                             <rect key="frame" x="-2" y="0.0" width="76" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Depature at" id="jYn-Zj-L1q">
                                                                                 <font key="font" metaFont="system"/>
@@ -1388,8 +1398,8 @@ CA
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-5q-tHP">
-                                                                            <rect key="frame" x="149" y="0.0" width="84" height="17"/>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-5q-tHP">
+                                                                            <rect key="frame" x="150" y="0.0" width="83" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Today, 00:00" placeholderString="Today, 00:00" id="V7r-NZ-xHD">
                                                                                 <dateFormatter key="formatter" dateStyle="short" timeStyle="short" doesRelativeDateFormatting="YES" id="PAl-rB-GcI"/>
                                                                                 <font key="font" metaFont="system"/>
@@ -1407,7 +1417,7 @@ CA
                                                                         <real value="3.4028234663852886e+38"/>
                                                                     </customSpacing>
                                                                 </stackView>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-Pc-Cbs">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-Pc-Cbs">
                                                                     <rect key="frame" x="6" y="36" width="235" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Limburgerhof, Erpolzheimerstaße 17" id="oEK-IT-ZeW">
                                                                         <font key="font" metaFont="system"/>

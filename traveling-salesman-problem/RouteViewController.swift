@@ -11,10 +11,10 @@ import MapKit
 import CoreLocation
 
 private let annotationIdentifier = "pin"
-private let nameColumnIdentifier = "NameColumnID"
+private let nameColumnIdentifier = NSUserInterfaceItemIdentifier("NameColumnID")
 private let nameCellIdentifier = "NameCellID"
 
-private let embedRouteSummaryControllerSegueIdentifier = "EmbedRouteSummaryController"
+private let embedRouteSummaryControllerSegueIdentifier = NSStoryboardSegue.Identifier("EmbedRouteSummaryController")
 
 private let allColumnIndices: IndexSet = [0]
 
@@ -31,25 +31,25 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
     var clickGestureRecognizer: NSClickGestureRecognizer!
     
     var waypointManager = WaypointManager()
-    var selectedWaypoint: Waypoint?
+    @objc var selectedWaypoint: Waypoint?
     
-    let mapPadding = EdgeInsets(top: 60, left: 60, bottom: 60, right: 60)
-    var transportType: Int = 0 {
+    let mapPadding = NSEdgeInsets(top: 60, left: 60, bottom: 60, right: 60)
+    @objc var transportType: Int = 0 {
         didSet {
             self.waypointManager.routeTransportType = MKDirectionsTransportType(fromSelectedIndex: transportType)
         }
     }
-    var routeWeight: Int = 1 {
+    @objc var routeWeight: Int = 1 {
         didSet {
             self.waypointManager.routeWeight = RouteWeight(fromSelectedIndex: routeWeight)
         }
     }
-    var shouldRequestAlternativRoutes: Bool = true {
+    @objc var shouldRequestAlternativRoutes: Bool = true {
         didSet {
             waypointManager.requestsAlternateRoutes = shouldRequestAlternativRoutes
         }
     }
-    var routeCalculationAlgorithm: Int = 0 {
+    @objc var routeCalculationAlgorithm: Int = 0 {
         didSet {
             guard let option = RouteCalculationAlgorithm(rawValue: routeCalculationAlgorithm) else {
                 return
@@ -78,7 +78,7 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         map.addGestureRecognizer(gestureRecognizer)
         clickGestureRecognizer = gestureRecognizer
         
-        let deleteMenuItem = NSApplication.shared().mainMenu?.item(withTag: 2)?.submenu?.item(withTag: 100)
+        let deleteMenuItem = NSApplication.shared.mainMenu?.item(withTag: 2)?.submenu?.item(withTag: 100)
         
         deleteMenuItem?.target = self
         deleteMenuItem?.action = #selector(deleteSelectedWaypoint)
@@ -103,11 +103,11 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         
         alert.beginSheetModal(for: view.window!) { (response) in
             switch response {
-            case NSAlertFirstButtonReturn:
+            case NSApplication.ModalResponse.alertFirstButtonReturn:
                 resolve(.retry)
-            case NSAlertSecondButtonReturn:
+            case NSApplication.ModalResponse.alertSecondButtonReturn:
                 resolve(.removeDestination)
-            case NSAlertThirdButtonReturn:
+            case NSApplication.ModalResponse.alertThirdButtonReturn:
                 resolve(.removeSource)
             default:
                 resolve(.retry)
@@ -115,7 +115,7 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         }
     }
     
-    func deleteSelectedWaypoint() {
+    @objc func deleteSelectedWaypoint() {
         guard let selectedWaypoint = selectedWaypoint else {
             return
         }
@@ -131,7 +131,7 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         self.map.addAnnotation(waypoint)
         //update table
         waypointTableView.beginUpdates()
-        waypointTableView.insertRows(at: [rowIndex], withAnimation: .slideDown)
+        waypointTableView.insertRows(at: [rowIndex], withAnimation: NSTableView.AnimationOptions.slideDown)
         waypointTableView.endUpdates()
     }
     
@@ -159,7 +159,7 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         self.map.removeAnnotation(waypoint)
         //update table
         waypointTableView.beginUpdates()
-        waypointTableView.removeRows(at: [rowIndex], withAnimation: .slideUp)
+        waypointTableView.removeRows(at: [rowIndex], withAnimation: NSTableView.AnimationOptions.slideUp)
         waypointTableView.endUpdates()
     }
     func didRemove(waypoint: Waypoint) {
@@ -268,7 +268,7 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         }
     }
     @IBAction func toogleAddAnotationState(_ sender: NSButton) {
-        modifyingAnotationsEnabled = sender.state == NSOnState
+        modifyingAnotationsEnabled = sender.state == .on
     }
     @objc func addAnotation(_ sender: NSClickGestureRecognizer) {
         guard modifyingAnotationsEnabled else {
@@ -347,7 +347,7 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         
         switch tableColumn.identifier {
         case nameColumnIdentifier:
-            guard let view = tableView.make(withIdentifier: nameCellIdentifier, owner: nil) as? WaypointCellView else {
+            guard let view = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: nameCellIdentifier), owner: nil) as? WaypointCellView else {
                 return nil
             }
             view.delegate = self

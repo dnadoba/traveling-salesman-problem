@@ -21,7 +21,8 @@ protocol WeightedEdge: Comparable, Hashable {
 }
 
 protocol EdgeWeight: Comparable {
-    init()
+    static var infinity: Self { get }
+    static var zero: Self { get }
     static func +(lhs: Self, rhs: Self) -> Self
 }
 
