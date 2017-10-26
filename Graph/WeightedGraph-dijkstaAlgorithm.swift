@@ -11,6 +11,9 @@ import Foundation
 extension WeightedGraph {
     
     func dijkstaShortestPath(from start: V, to end: V) -> (W, [V], [E])? {
+        guard start != end else {
+            return nil
+        }
         guard contains(start) else {
             return nil
         }
@@ -18,26 +21,29 @@ extension WeightedGraph {
             return nil
         }
         
-        var distanceFromStart = Dictionary<V, W>(minimumCapacity: vertexCount)
-        var predecessor = Dictionary<V, V>()
-        vertices.forEach { distanceFromStart[$0] = W.infinity }
-        distanceFromStart[start] = W.zero;
+        var distanceFromStartTo = Dictionary<V, W>(minimumCapacity: vertexCount)
+        var predecessorOf = Dictionary<V, V>()
+        var predecessorEdgeOf = Dictionary<V, E>()
+        vertices.forEach { distanceFromStartTo[$0] = W.infinity }
+        distanceFromStartTo[start] = W.zero;
         
         var verteciesToVisit = vertices
         
         func updateDistance(startVertex: V, neighbor: V) {
-            let distanceBettwenStartAndNeighbor = edges(from: startVertex, to: neighbor).min(by: <)!.weight
-            let newDistanceFromStartToNeighbor = distanceFromStart[startVertex]! + distanceBettwenStartAndNeighbor
-            if newDistanceFromStartToNeighbor < distanceFromStart[neighbor]! {
-                distanceFromStart[neighbor] = newDistanceFromStartToNeighbor
-                predecessor[neighbor] = startVertex
+            let predecessorEdgeOfNeighbor = self.edges(from: startVertex, to: neighbor).min(by: <)!
+            let distanceBettwenStartAndNeighbor = predecessorEdgeOfNeighbor.weight
+            let newDistanceFromStartToNeighbor = distanceFromStartTo[startVertex]! + distanceBettwenStartAndNeighbor
+            if newDistanceFromStartToNeighbor < distanceFromStartTo[neighbor]! {
+                distanceFromStartTo[neighbor] = newDistanceFromStartToNeighbor
+                predecessorOf[neighbor] = startVertex
+                predecessorEdgeOf[neighbor] = predecessorEdgeOfNeighbor
             }
             
         }
         
         while !verteciesToVisit.isEmpty {
             let startVertex = verteciesToVisit.min(by: { (lhs, rhs) -> Bool in
-                return distanceFromStart[lhs]! < distanceFromStart[rhs]!
+                return distanceFromStartTo[lhs]! < distanceFromStartTo[rhs]!
             })!
             verteciesToVisit.remove(startVertex)
             let neighbors = self.neighbors(of: startVertex)
@@ -49,9 +55,21 @@ extension WeightedGraph {
             
         }
         
+        let distance = distanceFromStartTo[end]!
+        //path in reversed order
+        var reversedPath = [end]
+        while reversedPath.last! != start {
+            guard let predecessor = predecessorOf[reversedPath.last!] else {
+                // a path from start to end does not exists
+                return nil
+            }
+            reversedPath.append(predecessor)
+        }
+        
+        let vertecies = reversedPath.reversed()
+        let edges = vertecies.flatMap { predecessorEdgeOf[$0] }
         
         
-        
-        return nil
+        return (distance, Array(vertecies), edges)
     }
 }

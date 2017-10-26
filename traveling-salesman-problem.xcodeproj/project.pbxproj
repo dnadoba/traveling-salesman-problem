@@ -38,6 +38,7 @@
 		C1DDF84E1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF84D1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift */; };
 		C1DDF8501FA28F460049455C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF84F1FA28F460049455C /* Station.swift */; };
 		C1DDF8521FA28F770049455C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF8511FA28F770049455C /* Connection.swift */; };
+		C1DDF8541FA296260049455C /* DijkstraAlgorithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF8531FA296260049455C /* DijkstraAlgorithmTest.swift */; };
 		C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */; };
 		C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		C1DDF84D1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WeightedGraph-dijkstaAlgorithm.swift"; path = "Graph/WeightedGraph-dijkstaAlgorithm.swift"; sourceTree = SOURCE_ROOT; };
 		C1DDF84F1FA28F460049455C /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		C1DDF8511FA28F770049455C /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		C1DDF8531FA296260049455C /* DijkstraAlgorithmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DijkstraAlgorithmTest.swift; sourceTree = "<group>"; };
 		C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointManagerState.swift; sourceTree = "<group>"; };
 		C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 				C1DDF84F1FA28F460049455C /* Station.swift */,
 				C1DDF8511FA28F770049455C /* Connection.swift */,
 				C1397A711E4923B200906AB2 /* WeightedGraphTests.swift */,
+				C1DDF8531FA296260049455C /* DijkstraAlgorithmTest.swift */,
 				C1397A731E4923B200906AB2 /* Info.plist */,
 			);
 			path = "traveling-salesman-problemTests";
@@ -415,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1DDF8501FA28F460049455C /* Station.swift in Sources */,
+				C1DDF8541FA296260049455C /* DijkstraAlgorithmTest.swift in Sources */,
 				C1DDF8521FA28F770049455C /* Connection.swift in Sources */,
 				C1397A721E4923B200906AB2 /* WeightedGraphTests.swift in Sources */,
 			);
@@ -599,7 +603,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/traveling-salesman-problem.app/Contents/MacOS/traveling-salesman-problem";
 			};
@@ -615,7 +619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/traveling-salesman-problem.app/Contents/MacOS/traveling-salesman-problem";
 			};
@@ -630,7 +634,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "traveling-salesman-problem";
 			};
@@ -645,7 +649,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problemUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "traveling-salesman-problem";
 			};

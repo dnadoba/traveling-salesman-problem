@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 @testable import traveling_salesman_problem
 
 struct Station {
