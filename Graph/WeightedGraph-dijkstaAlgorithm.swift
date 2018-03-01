@@ -67,7 +67,7 @@ extension WeightedGraph {
         }
         
         let vertecies = reversedPath.reversed()
-        let edges = vertecies.flatMap { predecessorEdgeOf[$0] }
+        let edges = vertecies.compactMap { predecessorEdgeOf[$0] }
         
         
         return (distance, Array(vertecies), edges)

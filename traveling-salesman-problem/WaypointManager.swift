@@ -173,7 +173,7 @@ class WaypointManager {
         
         //notify about changes
         delegate.then { (delegate) in
-            let changedWaypoints = [oldStartWaypoint, newStartWaypoint].flatMap({$0})
+            let changedWaypoints = [oldStartWaypoint, newStartWaypoint].compactMap({$0})
             changedWaypoints.forEach(delegate.didUpdate)
         }
         update()

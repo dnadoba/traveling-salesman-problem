@@ -61,7 +61,7 @@ extension WeightedGraph {
             return shortesPath(start: start, path: newPath, edges: newEdges, nextEdges: nextEdges, requiredPathLength: requiredPathLength, weightSummed: newWeight, complexity: 0)
         }
         let summedComplexity = results.map({$0.0}).reduce(newComplexity, +)
-        let possiblePaths = results.flatMap({$0.1})
+        let possiblePaths = results.compactMap({$0.1})
         
         return (summedComplexity, possiblePaths.min{$0.0 < $1.0})
     }

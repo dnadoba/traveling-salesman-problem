@@ -217,7 +217,7 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         selectedWaypoint = waypoint
         
         //select annotaion on map
-        let selectedWaypointsOnMap = map.selectedAnnotations.flatMap { (annotation) -> Waypoint? in
+        let selectedWaypointsOnMap = map.selectedAnnotations.compactMap { (annotation) -> Waypoint? in
             return annotation as? Waypoint
         }
         //only select if it is not already selected
